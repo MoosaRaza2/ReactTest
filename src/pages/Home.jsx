@@ -120,7 +120,7 @@ const Home = () => {
                   </TableCell>
                   <TableCell align="left">{row?.lastName}</TableCell>
                   <TableCell align="left">{row?.email}</TableCell>
-                  <TableCell align="left">{row?.salary}</TableCell>
+                  <TableCell align="left">$ {row?.salary}</TableCell>
                   <TableCell align="left">{row?.date}</TableCell>
                   <TableCell align="left">
                     <Button
