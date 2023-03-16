@@ -10,65 +10,9 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import CustomGridComponent from "../Components/CustomGridComponent";
 import PieChart from "../Components/PieChart";
+import { heading, rows } from "../data";
 
 const CustomGrid = () => {
-  const array1 = [
-    "Feature",
-    "passed",
-    "failed",
-    "skipped",
-    "pending",
-    "undefined",
-    "total",
-  ];
-  let rows = [
-    {
-      feature: "Manadatory field validation of addAbstract Page",
-      passed: 89,
-      Failed: 1,
-      skipped: 10,
-      pending: 0,
-      Undefined: 0,
-      Total: 100,
-    },
-    {
-      feature: "Navigate to all introduction page",
-      passed: 13,
-      Failed: 0,
-      skipped: 0,
-      pending: 0,
-      Undefined: 0,
-      Total: 13,
-    },
-    {
-      feature: "Manadatory field validation of login page",
-      passed: 30,
-      Failed: 0,
-      skipped: 0,
-      pending: 0,
-      Undefined: 0,
-      Total: 30,
-    },
-    {
-      feature: "Manadatory field validation of Contact Page",
-      passed: 100,
-      Failed: 0,
-      skipped: 0,
-      pending: 0,
-      Undefined: 0,
-      Total: 100,
-    },
-    {
-      feature: "Manadatory field validation of Profile Page",
-      passed: 71,
-      Failed: 1,
-      skipped: 2,
-      pending: 0,
-      Undefined: 0,
-      Total: 74,
-    },
-  ];
-
   const getTotalPassed = () => {
     let passedSum = 0;
     let failedSum = 0;
@@ -114,7 +58,7 @@ const CustomGrid = () => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              {array1.map((x) => {
+              {heading.map((x) => {
                 return (
                   <TableCell>
                     <CustomGridComponent
